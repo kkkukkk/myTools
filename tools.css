@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+body {
+    width: 100vh;
+    height: 100vh;
+    overflow: hidden;
+}
+
+input {
+    width: 10vw;
+    font-size: 14px;
+    text-align: right;
+    margin: 0;
+    padding: 0 5px;
+    border-radius: 5px;
+    border: 0.5px solid gainsboro;
+    background-color: beige;
+}
+
+input[type='time'] {
+    font-size: 16px;
+    width: 150px;
+}
+
+input:focus {
+    outline: none;
+    background-color: blanchedalmond;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vw;
+    height: 3vh;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: 1px solid rgba(0, 0, 0, .3)
+}
+
+button:hover {
+    background-color: blanchedalmond;
+    outline: 1px solid rgba(0,0,0,.3);
+}
+
+.container {
+    position: relative;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+
+    width: 60vw;
+    height: 70vh;
+    /* background: linear-gradient(135deg,powderblue 0.5%,aquamarine 5%,skyblue 50%,cornflowerblue,dodgerblue); */
+
+    overflow: hidden;
+    border-radius : 5px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, .3);
+}
+
+.wrapper {
+    position: absolute;
+    bottom: 3vh;
+    left: 2vw;
+
+    display: flex;
+    gap: 30px;
+}
+
+.wrapper > div > div,
+.titleWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 27vw;
+    padding: 10px 0;
+
+    border-radius: 5px;
+    background-color:aliceblue;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, .3);
+}
+
+.titleWrap {
+    position: absolute;
+    top: -6vh;
+    width: 56vw;
+}
+
+.timerWrap > div {
+    display: flex;
+    align-items: center;
+    width: 20vw;
+    justify-content: space-between;
+}
+
+.titleWrap,
+.inputWrap,
+.timerWrap { margin-bottom: 10px; }
+
+.inputs {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.inputs > div > input {
+    width: 8vw;
+    height: 3vh;
+    margin-right: 5px;
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: repeat(5, 4.5vw);
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 5px;
+}
+
+.btns > button {
+    background: crimson;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, .3);
+    width: 4.5vw;
+    height: 6.5vh;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+.btns > button:hover {
+    background: linear-gradient(45deg,powderblue,aquamarine, greenyellow);
+}
+
+.lbtns {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.result > input {
+    background-color: beige;
+    width: 16vw;
+    height: 3vh;
+    padding-right: 5px;
+}
+
+.result > input:focus { background-color: blanchedalmond; }
+
+.fin {
+    display: flex;
+    gap : 10px;
+}
+
+.fin > button,
+.reset button,
+#calButton,
+.selectLabel { font-size: 16px; }
+
+.calInputs {
+    display: flex;
+
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.calInputs > input { width: 10vw; }
+
+.callInputs .label {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    border: 0 none;
+    outline: 0 none;
+    padding-left: 15px;
+    background: transparent;
+    cursor: pointer;
+}
+
+#selectWrap{
+    position: relative;
+}
+
+#unitSelect {
+    top: 3.5vh;
+    left: 0vw;
+    position: absolute;
+    border-radius: 5px;
+    width: 5vw;
+    list-style-type: none;
+    background: beige;
+
+    overflow: hidden;
+    max-height: 0;
+    transition: .3s ease-in;
+}
+
+#unitSelect > li {
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px dashed rgb(170, 72, 72);
+    padding: 2px 0;
+    transition: .1s;
+    cursor: pointer;
+}
+
+#unitSelect > li:hover {
+    background: blanchedalmond;
+}
+
+#unitSelect > li:last-child {
+    border-bottom: 0 none;
+}
+
+.calResult {
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+    margin-right: 20%;
+}
+
+.calResult > div {
+    min-width: 15vw;
+    width: auto;
+    height: 2vh;
+    font-size: 14px;
+    text-align: right;
+    background-color: blanchedalmond;
+    padding: 1px 5px;
+}
+
+.right > .calBox{ padding: 5px 0; }

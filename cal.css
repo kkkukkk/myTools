@@ -1,0 +1,78 @@
+.boxInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resWrapper {
+    overflow: hidden;
+}
+
+.res {
+    border: 1px solid crimson;
+    border-radius: 5px;
+    width: 25vw;
+    height: 30vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+
+    background-color: azure;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    
+}
+
+.res::-webkit-scrollbar {
+    display: none;
+}
+
+.res > div {
+    width: fit-content;
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border: 1px solid;
+    border-color:crimson;
+    border-radius: 5px;
+    padding: 2px 5px;
+    opacity: .8;
+    background-color:antiquewhite;
+    font-size: 16px;
+}
+
+.inputBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.inputBox > input {
+    width: 19vw;
+    height: 3vh;
+    border: 1px solid crimson;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin-bottom: 5px;
+    background-color: azure;
+    text-align: right;
+}
+
+.inputBox > input:focus {
+    outline-color: rgba(255,0,0,.5)
+}
+
+.inputBox > button {
+    width: 5vw;
+    height: 30px;
+    border-radius: 5px;
+    background-color: crimson;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}

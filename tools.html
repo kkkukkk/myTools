@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=no">
+    <title>임시 타이틀</title>
+    <link rel="stylesheet" href="tools.css">
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+    <header></header>
+    <div class="container">
+        <div class="wrapper">
+
+            <div class="titleWrap">
+                임시 타이틀
+            </div>
+
+            <div class="left">
+                
+                <div class="timerWrap">
+                    <div>
+                        <div>끝 시간</div>
+                        <input type="text" value="오후 05:00:00" disabled/>
+                    </div>
+                    <div>
+                        <div>현재 시간</div>
+                        <input type="text" id="now" value="wait..." disabled/>
+                    </div>
+                    <div>
+                        <div>남은 시간</div>
+                        <input type="text" id="lastTime" value="wait..." disabled/>
+                    </div>
+                </div>
+                
+                <div class="inputWrap">
+                    <div class="inputs">
+                        <div>
+                            <input type="text" id="startDay">부터
+                        </div>
+                        <div>
+                            <input type="text" id="pnDay" value="0">일
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <button type="button" value="-1">-1</button>
+                        <button type="button" value="-7">-7</button>
+                        <button type="button" value="-30">-30</button>
+                        <button type="button" value="-100">-100</button>
+                        <button type="button" value="-365">-365</button>
+                        <button type="button" value="1">+1</button>
+                        <button type="button" value="7">+7</button>
+                        <button type="button" value="30">+30</button>
+                        <button type="button" value="100">+100</button>
+                        <button type="button" value="365">+365</button>
+                    </div>
+                    <div class="lbtns">
+                        <div class="fin">
+                            <button type="button" value="0">째?</button>
+                            <button type="button" value="1">후?</button>
+                        </div>
+                    </div>
+                    
+                    <div class="result">
+                        <input type="text" id="resDay" placeholder="결과" disabled>
+                        <div class="reset">
+                            <button type="button">초기화</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="calWrap">
+                    <div class="calInputs">
+                        <input type="text" id="calTarget" placeholder="숫자 입력" value="1"/>
+                        <div id="selectWrap">
+                            <button id="selectBtn" class="selectLabel">선택</button>
+                            <ul id="unitSelect">
+                                <li value="second">초</li>
+                                <li value="minute">분</li>
+                                <li value="hour">시</li>
+                                <li value="day" selected>일</li>
+                                <li value="week">주</li>
+                                <li value="month">달</li>
+                                <li value="year">년</li>
+                            </ul>
+                        </div>
+                        <button type="button" id="calButton">변환</button>
+                    </div>
+
+                    <div class="calResult">
+                        <div id="second">초</div>
+                        <div id="minute">분</div>
+                        <div id="hour">시</div>
+                        <div id="day">일</div>
+                        <div id="week">주</div>
+                        <div id="month">달</div>
+                        <div id="year">년</div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="calBox">
+                    <div class="boxInner">
+                        <div class="resWrapper">
+                            <div class="res"></div>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" id="cal" placeholder="계산식 입력"/>
+                            <button type="button" id="resBtn">결과</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer></footer>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script defer src="tools.js"></script>
+<script defer src="cal.js"></script>
+</html>
